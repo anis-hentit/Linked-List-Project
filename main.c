@@ -21,29 +21,29 @@ int main()
 
 	ptrM L;
 
-printf("\nBienvenue:\n");
+printf("\nWelcome:\n");
 
 	L= creation_liste("ft.txt");
 
-     printf("\nLa liste a etait creer a partir du fichier ft\n");
+     printf("\nThe List has been created using the file ft\n");
       do{
 
 	printf("-------------------------------------------------------\n");
-     printf("1-Imprimer la liste\n");
-     printf("2-Calculer la taille de la liste\n");
-     printf("3-Rechercher un mot\n");
-     printf("4-Rechercher et Remplacer tout\n");
-     printf("5-Rechercher une ligne\n");
-     printf("6-Inserer un mot\n");
-     printf("7-Inserer une ligne\n");
-     printf("8-Supprimer la premier occurence d'un mot\n");
-     printf("9-Supprimer toute les OCC d'un mot\n");
-     printf("10-Supprimer une ligne\n");
-     printf("11-Trier LLC par ordre alphabetique\n");
-     printf("12-Sauvgarder LLC dans un fichier\n");
+     printf("1-Print the List\n");
+     printf("2-Compute the size of the List\n");
+     printf("3-Look for a word\n");
+     printf("4-Look and replace All\n");
+     printf("5-Look for a line\n");
+     printf("6-Insert a word\n");
+     printf("7-Insert a line\n");
+     printf("8-Delete the first occurrence of a word\n");
+     printf("9-Delete all the occurrences of a word\n");
+     printf("10-Delete a line\n");
+     printf("11-Sort the list in alphabetical order\n");
+     printf("12-Save the list in a file\n");
      printf("-------------------------------------------------\n");
 
-       printf("\nEntrer votre choix\n");
+       printf("\nEnter your choice\n");
 
 
 
@@ -59,96 +59,96 @@ printf("\nBienvenue:\n");
         printf("\n");
         break;
        case 2:
-         printf("\nle nombre de mot est:%d\n",calculeNombreMot(L));
+         printf("\nThe number is:%d\n",calculeNombreMot(L));
         printf("\n");
         break;
        case 3:
-        printf("\nDonner le mot a rechercher\n");
+        printf("\nGive the name to look for\n");
       lc(str);
        lc(str);
         rechercher_mot( L,str);
         break;
        case 4:
-        printf("\nDonner le mot a introduire\n");
+        printf("\nGive the word to replace with\n");
         lc(mot);
         lc(mot);
-       printf("\nDonner le mot a remplacer\n");
+       printf("\nGive the word to replace\n");
         lc(str);
        Rechercher_Remplacer (L,str,mot);
-       printf("\nVoici la LLC apres modification\n");
+       printf("\nHere is the list after the operation\n");
        imprimerLLC(L);
        break;
        case 5:
-        printf("\nDonner le numero de la ligne\n");
+        printf("\nGive the index of the line\n");
         scanf("%d",&integer);
         RechercherLigne(L,integer);
         break;
        case 6:
-      printf("\nDonner le mot a inserer\n");
+      printf("\nGive the word to insert\n");
      lc(str);
      lc(str);
-      printf("\nDonner la ligne \n");
+      printf("\nGive the index of the line\n");
       scanf("%d",&integer);
-      printf("\nDonner la position du mot\n");
+      printf("\nGive the position of the word\n");
       scanf("%d",&position);
      inserer_mot(&L,str, integer,position,0);
-     printf("\n Voici la LLC apres modification\n");
+     printf("\n Here is the list after the operation\n");
      imprimerLLC(L);
 
      break;
        case 7:
-    printf("\nEntrer la chaine de caractere a inserer\n");
+    printf("\nEnter the string to insert\n");
      lc(ligne);
      lc(ligne);
-    printf("\n Entrer la position ou inserer la ligne\n");
+    printf("\n Enter the position where to insert the string\n");
     scanf("%d",&integer);
     inserer_ligne(&L, integer, ligne);
-    printf("\n Voici le texte apres modification\n");
+    printf("\n Here is the list after modification\n");
     imprimerLLC(L);
     break;
        case 8:
-           printf("\nDonner le mot a supprimer\n");
+           printf("\nGive the word to delete\n");
           lc(mot);
            lc(mot);
            if(supprimer_Mot(&L,mot)==1){
-           printf("\nVoici le texte apres modification\n");
-           imprimerLLC(L);}else printf("\nLe mot n'existe pas\n");
+           printf("\nHere is the list after modification\n");
+           imprimerLLC(L);}else printf("\nThe word doesnt exist\n");
            break;
        case 9:
-        printf("\nDonner le mot a supprimer\n");
+        printf("\nGive the word to delete\n");
         lc(mot);
         lc(mot);
         if(supprimerTouteOcc(&L, mot)==1){
-        printf("\nVoici le texte apres modification\n");
+        printf("\nHere is the list after the operation\n");
         imprimerLLC(L);}
-        else printf("\nLe mot n'existe pas\n");
+        else printf("\nThe word doesnt exist\n");
         break;
 
        case 10:
-        printf("\nDonner le numero de ligne a supprimer\n");
+        printf("\nGive the index of the line to delete\n");
         scanf("%d",&integer);
         if(supprimerLigne(&L,integer)==1)
         {
-            printf("\n Voici le texte apres modification\n");
+            printf("\n Here is the list after the operation\n");
             imprimerLLC(L);
         }
         break;
        case 11:
         triLLCAlpha(L);
-        printf("\nVoici la liste apres trie\n");
+        printf("\nHere is the list after the sort\n");
         imprimerLLC(L);
         break;
        case 12:
-        printf("\nDonner le nom du fichier ou sauvgarder avec l'extention .txt\n");
+        printf("\nGive the name of the file where to save to .txt\n");
          lc(str);
         lc(str);
         Sauv_LLC(L,str);
-        printf("\nLe fichier a ete creer\n");
+        printf("\nThe file has been created\n");
         break;
 
 }
 do{
-printf("\n Vouler vous faire autre chose? entrer 1 pour <OUI> ou 0 pour <NON>\n");
+printf("\n Do you want to do something else? enter 1 for <Yes> or 0 for <NO>\n");
 scanf("%d",&boucle);
 }while(boucle!=1&&boucle!=0);
 

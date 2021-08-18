@@ -28,3 +28,32 @@
 	"Operation.h"
 	<string.h>
 
+1514506251 source:e:\desktop\tout\linked list project\mllc.c
+	<stdio.h>
+	<stdlib.h>
+	"MLLC.h"
+	"Operation.h"
+	<string.h>
+
+1514505886 e:\desktop\tout\linked list project\mllc.h
+
+1514786178 e:\desktop\tout\linked list project\operation.h
+	<stdio.h>
+	<stdlib.h>
+	"MLLC.h"
+	"Operation.h"
+
+1514786178 source:e:\desktop\tout\linked list project\operation.c
+	<stdio.h>
+	<stdlib.h>
+	"MLLC.h"
+	"Operation.h"
+	<string.h>
+
+1629298907 source:e:\desktop\tout\linked list project\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Operation.h"
+	"MLLC.h"
+	"string.h"
+

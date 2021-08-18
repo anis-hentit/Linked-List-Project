@@ -108,14 +108,14 @@ void imprimerLLC(ptrM L)
 {
      ptrM p=L;
 
-              if(p==NULL)printf("la tete est a null\n");
+              if(p==NULL)printf("The head of the list is null\n");
          else{
 
 
                       while(p!=NULL){
 
 
-                                     printf("\nMot:%s, Position:%d, Numero ligne:%d\n",p->mot,p->pos,p->num_ligne);
+                                     printf("\nWord:%s, Position:%d, line index:%d\n",p->mot,p->pos,p->num_ligne);
 
 
                                                  p=suiv(p);
@@ -155,11 +155,11 @@ int rechercher_mot(ptrM L,char* mot)
             exist = 1;
             occ++;
 
-            printf("\nle mot  '%s' se trouve dans la ligne %d et la position %d \n\n", mot, p->num_ligne, p->pos);
+            printf("\nThe word  '%s' is present in the line with index %d at the position %d \n\n", mot, p->num_ligne, p->pos);
         }
         p = suiv(p);
     }
-    printf(" Le mot %s  apparait %d fois \n \n",mot,occ);
+    printf(" The word %s  appears %d time(s) \n \n",mot,occ);
     return exist;
 }
 
@@ -181,7 +181,7 @@ if(rechercher_mot(L,motR)==1)
        }
 
 
-    }else printf("le mot n'existe pas \n");
+    }else printf("The word doesnt exist \n");
 
 
 
@@ -230,7 +230,7 @@ return 0;
                    if(p!=NULL)
                 {
 
-                 printf("Voici les mots de la ligne numero: %d\n\n",ligne);
+                 printf("Here is the words of the line with index: %d\n\n",ligne);
 
                 while(p!=NULL && p->num_ligne==ligne)
                 {
@@ -244,7 +244,7 @@ return 0;
 
 
 
-                }else{ printf("La ligne n'existe pas\n"); return 0;}
+                }else{ printf("The line doesnt exist\n"); return 0;}
 
 
 
